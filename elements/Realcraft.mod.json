@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Realcraft",
+    "icon": {
+      "value": "Blocks.EMERALD_BLOCK"
+    },
+    "showSearch": true
+  }
+}
