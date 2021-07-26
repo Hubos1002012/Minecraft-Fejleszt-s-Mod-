@@ -40,6 +40,8 @@ public class BlodBlockAddedProcedure extends MinecraftRealModElements.ModElement
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), Blocks.WET_SPONGE.getDefaultState(), 3);
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())) {
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), Blocks.WET_SPONGE.getDefaultState(), 3);
+		}
 	}
 }
